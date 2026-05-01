@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+
+  <title>Connor Savage — DeskOS, Canada RP &amp; Links</title>
+  <meta name="description" content="Connor Savage: creator of DeskOS and Canada RP. Projects, socials, and contact for YouTube (@connorsav), Instagram (@connor_savage2), and email.">
+  <meta name="keywords" content="Connor Savage, DeskOS, Canada RP, LCPDFR, connorsav, connor_savage2, Connor Savage creator">
+  <meta name="author" content="Connor Savage">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="googlebot" content="index,follow">
+  <meta name="theme-color" content="#0c0c0e">
+
+  <!-- Set to your canonical URL when deploying (currently matches connor@connorsavage.ca) -->
+  <link rel="canonical" href="https://connorsavage.ca/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Connor Savage">
+  <meta property="og:description" content="DeskOS, Canada RP, LCPDFR downloads, plus social links and email for Connor Savage.">
+  <meta property="og:url" content="https://connorsavage.ca/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Connor Savage">
+  <!-- Add og:image once you have a share image (1200×630 recommended): <meta property="og:image" content="https://connorsavage.ca/og.jpg"> -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Connor Savage">
+  <meta name="twitter:description" content="DeskOS, Canada RP, LCPDFR, and links to Connor Savage’s socials &amp; email.">
+  <meta name="twitter:creator" content="@connorsav">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://connorsavage.ca/#website",
+        "url": "https://connorsavage.ca/",
+        "name": "Connor Savage",
+        "description": "Portfolio and links for Connor Savage — DeskOS, Canada RP, and social contact.",
+        "inLanguage": "en-CA",
+        "publisher": { "@id": "https://connorsavage.ca/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://connorsavage.ca/#person",
+        "name": "Connor Savage",
+        "url": "https://connorsavage.ca/",
+        "email": "mailto:connor@connorsavage.ca",
+        "sameAs": [
+          "https://www.youtube.com/@connorsav",
+          "https://www.instagram.com/connor_savage2/",
+          "https://deskos.ca/",
+          "https://canadarp.ca/",
+          "https://www.lcpdfr.com/profile/454136-connorftw/content/?type=downloads_file\u0026change_section=1"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..1000;1,9..40,300..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0c0e;
+      --bg-elevated: #141416;
+      --text: #e8e8ec;
+      --text-muted: #8a8a96;
+      --accent: #9db4c8;
+      --accent-soft: rgba(157, 180, 200, 0.12);
+      --border: rgba(255, 255, 255, 0.06);
+      --radius: 18px;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.15, 0.64, 1);
+      --ease-smooth: cubic-bezier(0.33, 1, 0.68, 1);
+      --t-hover: 0.42s var(--ease-out-expo);
+      --t-micro: 0.28s var(--ease-smooth);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(232, 232, 236, 0.12) transparent;
+    }
+
+    *::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background: rgba(232, 232, 236, 0.1);
+      border-radius: 999px;
+      border: 3px solid transparent;
+      background-clip: padding-box;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+      background: rgba(232, 232, 236, 0.16);
+      border: 3px solid transparent;
+      background-clip: padding-box;
+    }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-weight: 400;
+      font-size: clamp(16px, 2.75vw, 18.5px);
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: clamp(3rem, 10vw, 6rem) 1.5rem 3.5rem;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 55% at 50% -20%, rgba(157, 180, 200, 0.14), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(120, 100, 160, 0.06), transparent 45%);
+      z-index: -1;
+      opacity: 0;
+      animation: backdrop-in 3.2s var(--ease-out-expo) 0.2s forwards;
+    }
+
+    @keyframes backdrop-in {
+      from {
+        opacity: 0;
+        transform: scale(1.12);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes rise-in {
+      from {
+        opacity: 0;
+        transform: translateY(52px);
+        filter: brightness(1.12);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: brightness(1);
+      }
+    }
+
+    @keyframes name-word-in {
+      0% {
+        opacity: 0;
+        transform: translateY(0.72em) scale(0.92);
+        letter-spacing: 0.22em;
+        filter: blur(10px);
+      }
+      55% {
+        opacity: 1;
+        filter: blur(0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        letter-spacing: -0.02em;
+        filter: blur(0);
+      }
+    }
+
+    @keyframes name-line {
+      0% {
+        transform: scaleX(0);
+        opacity: 0;
+      }
+      65% {
+        opacity: 0.55;
+      }
+      100% {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes tagline-in {
+      from {
+        opacity: 0;
+        transform: translateY(26px);
+        letter-spacing: 0.42em;
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0.06em;
+      }
+    }
+
+    header .name-headline {
+      will-change: transform, opacity;
+    }
+
+    header .name-word {
+      display: inline-block;
+      opacity: 0;
+      animation: name-word-in 1.75s var(--ease-spring) forwards;
+      will-change: transform, opacity, filter;
+    }
+
+    header .name-word:nth-child(1) {
+      animation-delay: 0.45s;
+    }
+
+    header .name-word:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    header .name::after {
+      content: "";
+      display: block;
+      width: min(320px, 82vw);
+      height: 2px;
+      margin: clamp(1.1rem, 3vw, 1.5rem) auto 0;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(157, 180, 200, 0.5) 42%,
+        rgba(232, 232, 236, 0.2) 60%,
+        transparent
+      );
+      transform-origin: center;
+      opacity: 0;
+      animation: name-line 1.8s var(--ease-out-expo) 1.25s forwards;
+    }
+
+    section h2 {
+      opacity: 0;
+      animation: rise-in 1.35s var(--ease-out-expo) forwards;
+    }
+
+    section:nth-of-type(1) h2 {
+      animation-delay: 3s;
+    }
+
+    section:nth-of-type(1) ul li:nth-child(1),
+    section:nth-of-type(1) ul li:nth-child(2),
+    section:nth-of-type(1) ul li:nth-child(3),
+    section:nth-of-type(2) h2,
+    section:nth-of-type(2) ul li:nth-child(1),
+    section:nth-of-type(2) ul li:nth-child(2),
+    section:nth-of-type(3) h2,
+    section:nth-of-type(3) ul li:nth-child(1),
+    section:nth-of-type(3) ul li:nth-child(2) {
+      opacity: 0;
+      animation: rise-in 1.32s var(--ease-out-expo) forwards;
+    }
+
+    section:nth-of-type(1) ul li:nth-child(1) {
+      animation-delay: 3.52s;
+    }
+
+    section:nth-of-type(1) ul li:nth-child(2) {
+      animation-delay: 4.06s;
+    }
+
+    section:nth-of-type(1) ul li:nth-child(3) {
+      animation-delay: 4.62s;
+    }
+
+    section:nth-of-type(2) h2 {
+      animation-delay: 5.32s;
+    }
+
+    section:nth-of-type(2) ul li:nth-child(1) {
+      animation-delay: 5.86s;
+    }
+
+    section:nth-of-type(2) ul li:nth-child(2) {
+      animation-delay: 6.42s;
+    }
+
+    section:nth-of-type(3) h2 {
+      animation-delay: 6.95s;
+    }
+
+    section:nth-of-type(3) ul li:nth-child(1) {
+      animation-delay: 7.48s;
+    }
+
+    section:nth-of-type(3) ul li:nth-child(2) {
+      animation-delay: 8.04s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      body::before {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+
+      header .name-word,
+      header .name::after,
+      header .tagline,
+      section h2,
+      section ul li {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        letter-spacing: inherit !important;
+        filter: none !important;
+        width: auto;
+      }
+
+      header .name::after {
+        transform: scaleX(1);
+      }
+
+      header .tagline {
+        letter-spacing: normal !important;
+      }
+
+      .card-link,
+      .card-link:hover,
+      .link-label,
+      .link-meta,
+      .arrow {
+        transition-duration: 0.12s !important;
+      }
+    }
+
+    main {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: clamp(3.25rem, 9vw, 4.75rem);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      header .name-word,
+      header .name-headline,
+      header .tagline {
+        will-change: auto;
+      }
+    }
+
+    .name-headline.name {
+      font-family: "DM Serif Display", "Georgia", serif;
+      font-size: clamp(3rem, 10.5vw, 4rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      font-optical-sizing: auto;
+      line-height: 1.08;
+      margin-bottom: clamp(1rem, 3vw, 1.35rem);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.22em;
+    }
+
+    header .tagline {
+      opacity: 0;
+      animation: tagline-in 1.65s var(--ease-out-expo) 2.25s forwards;
+      will-change: transform, opacity, letter-spacing;
+      font-size: clamp(1.05rem, 3vw, 1.2rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+
+    section {
+      margin-bottom: clamp(2.35rem, 6vw, 3rem);
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    a.card-link {
+      text-decoration: none;
+    }
+
+    button.card-link {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 100%;
+      margin: 0;
+      cursor: pointer;
+      font: inherit;
+      text-align: start;
+    }
+
+    .card-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.1rem;
+      padding: 1.1rem 1.2rem;
+      color: inherit;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow:
+        0 0 0 0 transparent,
+        0 1px 2px rgba(0, 0, 0, 0.2);
+      transition:
+        border-color var(--t-hover),
+        background var(--t-hover),
+        box-shadow var(--t-hover),
+        transform var(--t-hover);
+    }
+
+    .card-link:hover {
+      border-color: rgba(157, 180, 200, 0.32);
+      background: rgba(22, 24, 28, 0.98);
+      box-shadow:
+        0 12px 40px -18px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(157, 180, 200, 0.08);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .card-link:hover {
+        transform: translateY(-3px);
+      }
+
+      .card-link:active {
+        transform: translateY(-1px) scale(0.995);
+      }
+    }
+
+    .card-link:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .link-label {
+      font-weight: 500;
+      transition: color var(--t-micro);
+    }
+
+    .link-meta {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      flex-shrink: 0;
+      transition: color var(--t-micro), transform var(--t-hover);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .card-link:hover .link-meta {
+        color: rgba(232, 232, 236, 0.72);
+        transform: translateX(2px);
+      }
+
+      .card-link:hover .link-label {
+        color: rgba(247, 248, 251, 0.98);
+      }
+    }
+
+    .link-meta .arrow {
+      display: inline-block;
+      transition: transform var(--t-hover);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .card-link:hover .link-meta .arrow {
+        transform: translateX(3px);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1 class="name name-headline">
+        <span class="name-word">Connor</span><span class="name-word">Savage</span>
+      </h1>
+      <p class="tagline">Projects · Socials · Contact</p>
+    </header>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <ul>
+        <li>
+          <a class="card-link" href="https://deskos.ca/" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">DeskOS</span>
+            <span class="link-meta">deskos.ca <span class="arrow">→</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="card-link" href="https://canadarp.ca/" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">Canada RP</span>
+            <span class="link-meta">canadarp.ca <span class="arrow">→</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="card-link" href="https://www.lcpdfr.com/profile/454136-connorftw/content/?type=downloads_file&amp;change_section=1" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">LCPDFR</span>
+            <span class="link-meta">Downloads <span class="arrow">→</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="socials-heading">
+      <h2 id="socials-heading">Socials</h2>
+      <ul>
+        <li>
+          <a class="card-link" href="https://www.youtube.com/@connorsav" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">YouTube</span>
+            <span class="link-meta">@connorsav <span class="arrow">→</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="card-link" href="https://www.instagram.com/connor_savage2/" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">Instagram</span>
+            <span class="link-meta">@connor_savage2 <span class="arrow">→</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <ul>
+        <li>
+          <button type="button" id="discord-copy" class="card-link" aria-label="Copy Discord username connorftw">
+            <span class="link-label">Discord</span>
+            <span class="link-meta">connorftw · tap to copy</span>
+          </button>
+        </li>
+        <li>
+          <a class="card-link" href="mailto:connor@connorsavage.ca">
+            <span class="link-label">Email</span>
+            <span class="link-meta">connor@connorsavage.ca <span class="arrow">→</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var b = document.getElementById("discord-copy");
+      if (!b) return;
+      b.addEventListener("click", function () {
+        navigator.clipboard.writeText("connorftw").catch(function () {});
+      });
+    })();
+  </script>
+</body>
+</html>
