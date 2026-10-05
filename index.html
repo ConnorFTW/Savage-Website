@@ -5,30 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
 
-  <title>Connor Savage — DeskOS, Canada RP &amp; Links</title>
-  <meta name="description" content="Connor Savage: creator of DeskOS and Canada RP. Projects, socials, and contact for YouTube (@connorsav), Instagram (@connor_savage2), and email.">
-  <meta name="keywords" content="Connor Savage, DeskOS, Canada RP, LCPDFR, connorsav, connor_savage2, Connor Savage creator">
+  <title>Connor Savage | DeskOS, Receet &amp; Canada RP</title>
+  <meta name="description" content="Official site of Connor Savage — creator of DeskOS, Receet, and Canada RP. Explore projects, YouTube (@connorsav), Instagram (@connor_savage2), Discord, and email.">
+  <meta name="keywords" content="Connor Savage, DeskOS, Receet, Canada RP, LCPDFR, connorsav, connor_savage2, deskos.ca, receet.ca, canadarp.ca">
   <meta name="author" content="Connor Savage">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="googlebot" content="index,follow">
   <meta name="theme-color" content="#0c0c0e">
+  <meta name="format-detection" content="telephone=no">
 
-  <!-- Set to your canonical URL when deploying (currently matches connor@connorsavage.ca) -->
   <link rel="canonical" href="https://connorsavage.ca/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Connor Savage">
-  <meta property="og:description" content="DeskOS, Canada RP, LCPDFR downloads, plus social links and email for Connor Savage.">
+  <meta property="og:title" content="Connor Savage | DeskOS, Receet &amp; Canada RP">
+  <meta property="og:description" content="Projects and contact for Connor Savage — DeskOS, Receet, Canada RP, LCPDFR, plus YouTube, Instagram, Discord, and email.">
   <meta property="og:url" content="https://connorsavage.ca/">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
   <meta property="og:locale" content="en_CA">
   <meta property="og:site_name" content="Connor Savage">
-  <!-- Add og:image once you have a share image (1200×630 recommended): <meta property="og:image" content="https://connorsavage.ca/og.jpg"> -->
+  <meta property="profile:first_name" content="Connor">
+  <meta property="profile:last_name" content="Savage">
+  <!-- Recommended: add og:image (1200×630): <meta property="og:image" content="https://connorsavage.ca/og.jpg"> -->
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Connor Savage">
-  <meta name="twitter:description" content="DeskOS, Canada RP, LCPDFR, and links to Connor Savage’s socials &amp; email.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Connor Savage | DeskOS, Receet &amp; Canada RP">
+  <meta name="twitter:description" content="DeskOS, Receet, Canada RP, and links to Connor Savage’s socials and email.">
   <meta name="twitter:creator" content="@connorsav">
 
   <script type="application/ld+json">
@@ -40,16 +42,30 @@
         "@id": "https://connorsavage.ca/#website",
         "url": "https://connorsavage.ca/",
         "name": "Connor Savage",
-        "description": "Portfolio and links for Connor Savage — DeskOS, Canada RP, and social contact.",
+        "description": "Official portfolio and links for Connor Savage — DeskOS, Receet, Canada RP, and social contact.",
         "inLanguage": "en-CA",
         "publisher": { "@id": "https://connorsavage.ca/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://connorsavage.ca/#webpage",
+        "url": "https://connorsavage.ca/",
+        "name": "Connor Savage",
+        "isPartOf": { "@id": "https://connorsavage.ca/#website" },
+        "about": { "@id": "https://connorsavage.ca/#person" },
+        "mainEntity": { "@id": "https://connorsavage.ca/#person" },
+        "inLanguage": "en-CA"
       },
       {
         "@type": "Person",
         "@id": "https://connorsavage.ca/#person",
         "name": "Connor Savage",
+        "givenName": "Connor",
+        "familyName": "Savage",
         "url": "https://connorsavage.ca/",
-        "email": "mailto:connor@connorsavage.ca",
+        "email": "mailto:connorjmsavage1@icloud.com",
+        "jobTitle": "Creator",
+        "description": "Creator of DeskOS, Receet, and Canada RP.",
         "sameAs": [
           "https://www.youtube.com/@connorsav",
           "https://www.instagram.com/connor_savage2/",
@@ -57,7 +73,8 @@
           "https://receet.ca/",
           "https://canadarp.ca/",
           "https://www.lcpdfr.com/profile/454136-connorftw/content/?type=downloads_file\u0026change_section=1"
-        ]
+        ],
+        "knowsAbout": ["DeskOS", "Receet", "Canada RP", "LCPDFR"]
       }
     ]
   }
@@ -81,6 +98,8 @@
       --ease-smooth: cubic-bezier(0.33, 1, 0.68, 1);
       --t-hover: 0.42s var(--ease-out-expo);
       --t-micro: 0.28s var(--ease-smooth);
+      --mx: 50%;
+      --my: 30%;
     }
 
     * {
@@ -136,17 +155,28 @@
       overflow-x: hidden;
     }
 
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -2;
+    }
+
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
       background:
-        radial-gradient(ellipse 80% 55% at 50% -20%, rgba(157, 180, 200, 0.14), transparent 55%),
-        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(120, 100, 160, 0.06), transparent 45%);
+        radial-gradient(ellipse 55% 45% at var(--mx) var(--my), rgba(157, 180, 200, 0.16), transparent 55%),
+        radial-gradient(ellipse 80% 55% at 50% -20%, rgba(157, 180, 200, 0.1), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(120, 100, 160, 0.05), transparent 45%);
       z-index: -1;
       opacity: 0;
       animation: backdrop-in 3.2s var(--ease-out-expo) 0.2s forwards;
+      transition: background-position 0.1s linear;
     }
 
     @keyframes backdrop-in {
@@ -173,22 +203,12 @@
       }
     }
 
-    @keyframes name-word-in {
-      0% {
+    @keyframes caret-blink {
+      0%, 45% {
+        opacity: 1;
+      }
+      50%, 100% {
         opacity: 0;
-        transform: translateY(0.72em) scale(0.92);
-        letter-spacing: 0.22em;
-        filter: blur(10px);
-      }
-      55% {
-        opacity: 1;
-        filter: blur(0);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        letter-spacing: -0.02em;
-        filter: blur(0);
       }
     }
 
@@ -206,36 +226,54 @@
       }
     }
 
-    @keyframes tagline-in {
-      from {
-        opacity: 0;
-        transform: translateY(26px);
-        letter-spacing: 0.42em;
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-        letter-spacing: 0.06em;
-      }
-    }
-
     header .name-headline {
-      will-change: transform, opacity;
-    }
-
-    header .name-word {
+      position: relative;
       display: inline-block;
+      text-align: left;
+      min-height: 1.08em;
+    }
+
+    header .name-sizer {
+      visibility: hidden;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    header .name-live {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-flex;
+      align-items: baseline;
+      white-space: nowrap;
+    }
+
+    header .name-typed {
+      white-space: pre;
+    }
+
+    header .name-caret {
+      display: inline-block;
+      width: 0.08em;
+      height: 0.82em;
+      margin-left: 0.08em;
+      background: rgba(157, 180, 200, 0.85);
+      border-radius: 1px;
+      transform: translateY(0.08em);
       opacity: 0;
-      animation: name-word-in 1.75s var(--ease-spring) forwards;
-      will-change: transform, opacity, filter;
+      vertical-align: baseline;
     }
 
-    header .name-word:nth-child(1) {
-      animation-delay: 0.45s;
+    header .name-caret.is-typing {
+      opacity: 1;
+      animation: caret-blink 0.9s steps(1) infinite;
     }
 
-    header .name-word:nth-child(2) {
-      animation-delay: 1s;
+    header .name-caret.is-done {
+      animation: none;
+      opacity: 0;
+      transition: opacity 0.35s var(--ease-smooth);
     }
 
     header .name::after {
@@ -253,7 +291,11 @@
       );
       transform-origin: center;
       opacity: 0;
-      animation: name-line 1.8s var(--ease-out-expo) 1.25s forwards;
+      transform: scaleX(0);
+    }
+
+    header.is-typed .name::after {
+      animation: name-line 1.5s var(--ease-out-expo) forwards;
     }
 
     section h2 {
@@ -262,7 +304,7 @@
     }
 
     section:nth-of-type(1) h2 {
-      animation-delay: 3s;
+      animation-delay: 2.4s;
     }
 
     section:nth-of-type(1) ul li:nth-child(1),
@@ -280,43 +322,43 @@
     }
 
     section:nth-of-type(1) ul li:nth-child(1) {
-      animation-delay: 3.52s;
+      animation-delay: 2.85s;
     }
 
     section:nth-of-type(1) ul li:nth-child(2) {
-      animation-delay: 4.06s;
+      animation-delay: 3.3s;
     }
 
     section:nth-of-type(1) ul li:nth-child(3) {
-      animation-delay: 4.62s;
+      animation-delay: 3.75s;
     }
 
     section:nth-of-type(1) ul li:nth-child(4) {
-      animation-delay: 5.18s;
+      animation-delay: 4.2s;
     }
 
     section:nth-of-type(2) h2 {
-      animation-delay: 5.88s;
+      animation-delay: 4.75s;
     }
 
     section:nth-of-type(2) ul li:nth-child(1) {
-      animation-delay: 6.42s;
+      animation-delay: 5.2s;
     }
 
     section:nth-of-type(2) ul li:nth-child(2) {
-      animation-delay: 6.98s;
+      animation-delay: 5.65s;
     }
 
     section:nth-of-type(3) h2 {
-      animation-delay: 7.51s;
+      animation-delay: 6.15s;
     }
 
     section:nth-of-type(3) ul li:nth-child(1) {
-      animation-delay: 8.04s;
+      animation-delay: 6.6s;
     }
 
     section:nth-of-type(3) ul li:nth-child(2) {
-      animation-delay: 8.6s;
+      animation-delay: 7.05s;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -330,7 +372,31 @@
         transform: none;
       }
 
-      header .name-word,
+      #bg-canvas {
+        display: none;
+      }
+
+      header .name-caret {
+        display: none;
+      }
+
+      header .name-sizer {
+        visibility: visible;
+      }
+
+      header .name-live,
+      header .tagline-live {
+        display: none;
+      }
+
+      header .tagline-sizer {
+        visibility: visible;
+      }
+
+      header .tagline-caret {
+        display: none;
+      }
+
       header .name::after,
       header .tagline,
       section h2,
@@ -345,6 +411,7 @@
 
       header .name::after {
         transform: scaleX(1);
+        opacity: 1;
       }
 
       header .tagline {
@@ -363,6 +430,8 @@
     main {
       width: 100%;
       max-width: 500px;
+      position: relative;
+      z-index: 1;
     }
 
     header {
@@ -371,8 +440,6 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-
-      header .name-word,
       header .name-headline,
       header .tagline {
         will-change: auto;
@@ -387,22 +454,69 @@
       font-optical-sizing: auto;
       line-height: 1.08;
       margin-bottom: clamp(1rem, 3vw, 1.35rem);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: baseline;
-      gap: 0.22em;
     }
 
     header .tagline {
-      opacity: 0;
-      animation: tagline-in 1.65s var(--ease-out-expo) 2.25s forwards;
-      will-change: transform, opacity, letter-spacing;
-      font-size: clamp(1.05rem, 3vw, 1.2rem);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+      margin: 0 auto;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: clamp(0.82rem, 2.4vw, 0.95rem);
+      font-weight: 400;
+      line-height: 1.65;
+      letter-spacing: 0;
       color: var(--text-muted);
+      text-transform: none;
+      text-align: left;
+    }
+
+    header .tagline-sizer {
+      visibility: hidden;
+      white-space: pre;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    header .tagline-live {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-flex;
+      align-items: flex-start;
+      white-space: pre;
+    }
+
+    header .tagline-typed {
+      white-space: pre;
+    }
+
+    header .tagline-caret {
+      display: inline-block;
+      width: 0.45em;
+      height: 1.05em;
+      margin-left: 0.05em;
+      background: rgba(157, 180, 200, 0.75);
+      border-radius: 1px;
+      opacity: 0;
+      transform: translateY(0.12em);
+    }
+
+    header .tagline-caret.is-typing {
+      opacity: 1;
+      animation: caret-blink 0.9s steps(1) infinite;
+    }
+
+    header .tagline-caret.is-done {
+      animation: none;
+      opacity: 0;
+      transition: opacity 0.35s var(--ease-smooth);
+    }
+
+    @media (max-width: 380px) {
+      header .tagline {
+        font-size: 0.72rem;
+      }
     }
 
     section {
@@ -523,12 +637,22 @@
   </style>
 </head>
 <body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
   <main>
-    <header>
+    <header id="site-header">
       <h1 class="name name-headline">
-        <span class="name-word">Connor</span><span class="name-word">Savage</span>
+        <span class="name-sizer">Connor Savage</span>
+        <span class="name-live" aria-hidden="true">
+          <span class="name-typed" id="name-typed"></span><span class="name-caret" id="name-caret"></span>
+        </span>
       </h1>
-      <p class="tagline">Projects · Socials · Contact</p>
+      <p class="tagline" aria-label="if tired drink espresso, else keep coding">
+        <span class="tagline-sizer">if (tired) drinkEspresso();
+else keepCoding();</span>
+        <span class="tagline-live" aria-hidden="true">
+          <span class="tagline-typed" id="code-typed"></span><span class="tagline-caret" id="code-caret"></span>
+        </span>
+      </p>
     </header>
 
     <section aria-labelledby="projects-heading">
@@ -589,9 +713,9 @@
           </button>
         </li>
         <li>
-          <a class="card-link" href="mailto:connor@connorsavage.ca">
+          <a class="card-link" href="mailto:connorjmsavage1@icloud.com">
             <span class="link-label">Email</span>
-            <span class="link-meta">connor@connorsavage.ca <span class="arrow">→</span></span>
+            <span class="link-meta">connorjmsavage1@icloud.com <span class="arrow">→</span></span>
           </a>
         </li>
       </ul>
@@ -601,9 +725,174 @@
   <script>
     (function () {
       var b = document.getElementById("discord-copy");
-      if (!b) return;
-      b.addEventListener("click", function () {
-        navigator.clipboard.writeText("connorftw").catch(function () {});
+      if (b) {
+        b.addEventListener("click", function () {
+          navigator.clipboard.writeText("connorftw").catch(function () {});
+        });
+      }
+
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var header = document.getElementById("site-header");
+      var typedEl = document.getElementById("name-typed");
+      var caretEl = document.getElementById("name-caret");
+      var codeEl = document.getElementById("code-typed");
+      var codeCaret = document.getElementById("code-caret");
+      var fullName = "Connor Savage";
+      var codeLines = "if (tired) drinkEspresso();\nelse keepCoding();";
+
+      function typeText(el, caret, text, done) {
+        var i = 0;
+        if (caret) caret.classList.add("is-typing");
+        (function typeNext() {
+          if (i < text.length) {
+            el.textContent += text.charAt(i);
+            i += 1;
+            var ch = text.charAt(i - 1);
+            var delay = ch === "\n" ? 220 : ch === " " ? 55 : 38 + Math.random() * 22;
+            setTimeout(typeNext, delay);
+          } else {
+            if (caret) {
+              caret.classList.remove("is-typing");
+              setTimeout(function () {
+                caret.classList.add("is-done");
+              }, 180);
+            }
+            if (done) done();
+          }
+        })();
+      }
+
+      function finishName() {
+        if (!header) return;
+        header.classList.add("is-typed");
+        if (caretEl) {
+          caretEl.classList.remove("is-typing");
+          setTimeout(function () {
+            caretEl.classList.add("is-done");
+          }, 200);
+        }
+        if (codeEl && !reduceMotion) {
+          setTimeout(function () {
+            typeText(codeEl, codeCaret, codeLines);
+          }, 280);
+        }
+      }
+
+      if (typedEl) {
+        if (reduceMotion) {
+          if (codeEl) codeEl.textContent = codeLines;
+          finishName();
+        } else {
+          setTimeout(function () {
+            typeText(typedEl, caretEl, fullName, finishName);
+          }, 320);
+        }
+      }
+
+      var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (reduceMotion || !finePointer) return;
+
+      var canvas = document.getElementById("bg-canvas");
+      if (!canvas) return;
+      var ctx = canvas.getContext("2d");
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var width = 0;
+      var height = 0;
+      var dots = [];
+      var mouse = { x: -9999, y: -9999, tx: -9999, ty: -9999 };
+      var raf = 0;
+
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        buildDots();
+      }
+
+      function buildDots() {
+        dots = [];
+        var gap = width < 700 ? 36 : 42;
+        for (var y = gap * 0.5; y < height; y += gap) {
+          for (var x = gap * 0.5; x < width; x += gap) {
+            dots.push({
+              x: x,
+              y: y,
+              ox: x,
+              oy: y,
+              phase: Math.random() * Math.PI * 2
+            });
+          }
+        }
+      }
+
+      function onMove(e) {
+        mouse.tx = e.clientX;
+        mouse.ty = e.clientY;
+        document.body.style.setProperty("--mx", (e.clientX / width) * 100 + "%");
+        document.body.style.setProperty("--my", (e.clientY / height) * 100 + "%");
+      }
+
+      function onLeave() {
+        mouse.tx = width * 0.5;
+        mouse.ty = height * 0.28;
+      }
+
+      function frame(t) {
+        raf = requestAnimationFrame(frame);
+        mouse.x += (mouse.tx - mouse.x) * 0.12;
+        mouse.y += (mouse.ty - mouse.y) * 0.12;
+
+        ctx.clearRect(0, 0, width, height);
+
+        var time = t * 0.001;
+        var radius = Math.min(220, Math.max(140, width * 0.22));
+
+        for (var i = 0; i < dots.length; i++) {
+          var d = dots[i];
+          var dx = mouse.x - d.ox;
+          var dy = mouse.y - d.oy;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          var influence = Math.max(0, 1 - dist / radius);
+          var pull = influence * influence;
+          var angle = Math.atan2(dy, dx);
+
+          d.x = d.ox + Math.cos(angle) * pull * 14;
+          d.y = d.oy + Math.sin(angle) * pull * 14;
+
+          var pulse = 0.35 + Math.sin(time * 1.2 + d.phase) * 0.08;
+          var alpha = pulse + pull * 0.7;
+          var size = 1.1 + pull * 2.2;
+
+          if (pull > 0.08) {
+            ctx.beginPath();
+            ctx.moveTo(d.x, d.y);
+            ctx.lineTo(d.ox + dx * 0.08, d.oy + dy * 0.08);
+            ctx.strokeStyle = "rgba(157, 180, 200," + (pull * 0.22) + ")";
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, size, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(157, 180, 200," + (alpha * 0.28) + ")";
+          ctx.fill();
+        }
+      }
+
+      resize();
+      mouse.x = mouse.tx = width * 0.5;
+      mouse.y = mouse.ty = height * 0.28;
+      window.addEventListener("resize", resize);
+      window.addEventListener("pointermove", onMove, { passive: true });
+      window.addEventListener("pointerleave", onLeave);
+      raf = requestAnimationFrame(frame);
+
+      window.addEventListener("pagehide", function () {
+        cancelAnimationFrame(raf);
       });
     })();
   </script>
