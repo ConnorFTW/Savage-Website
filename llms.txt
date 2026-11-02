@@ -1,0 +1,29 @@
+# Connor Savage
+
+> Connor Savage (also known as ConnorFTW) is a Canadian software and hardware developer who started programming at age 10, creating plugins for Grand Theft Auto V's LSPDFR modification. He is the creator of DeskOS, Receet, Canada RP, and Dispatch Simulator.
+
+His early projects included the LSPDFR plugins FBI Callouts, EMS Callouts, K9 Callouts, and City Callouts. Since then, his work has expanded into hardware, desktop applications, web platforms, and game development, ranging from physical touchscreen controllers to digital receipt systems and simulation games.
+
+Full bio: https://connorsavage.ca/bio/
+
+## Projects
+
+- [DeskOS](https://deskos.ca/): Touchscreen desk controller combining custom hardware with companion software for audio mixing, Spotify integration, system monitoring, and customizable controls.
+- [Receet](https://receet.ca/): NFC-based digital receipt system with point-of-sale integrations, a merchant dashboard, and a mobile app for managing receipts.
+- [Canada RP](https://canadarp.ca/): Canadian FiveM roleplay community founded and operated by Connor. Features OPP, RCMP, Toronto Police, Fire/EMS, and civilian departments, with custom vehicles, scripts, and server systems.
+- [Dispatch Simulator](https://dispatchsim.ca/): 911 emergency dispatch simulation game featuring AI-powered callers, unscripted voice conversations, and real-time police, fire, and EMS unit management.
+- [LSPDFR Plugins](https://www.lcpdfr.com/profile/454136-connorftw/content/?type=downloads_file&change_section=1): Creator of FBI Callouts, EMS Callouts, K9 Callouts, and City Callouts for LSPDFR, a Grand Theft Auto V modification that allows players to take on the role of a police officer.
+
+## Development
+
+- Languages: Python, C#, Java, JavaScript, HTML/CSS
+- Areas: Software Development, Hardware Development, Game Development, Web Development, Server Management
+
+## Contact
+
+- Website: https://connorsavage.ca/
+- Bio: https://connorsavage.ca/bio/
+- Email: connorjmsavage1@icloud.com
+- Discord: connorftw
+- YouTube: https://www.youtube.com/@connorsav
+- Instagram: https://www.instagram.com/connor_savage2/
