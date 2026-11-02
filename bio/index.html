@@ -168,13 +168,23 @@
       margin-bottom: clamp(1.5rem, 4vw, 3rem);
     }
     .bio p {
-      max-width: 34ch;
-      font-size: clamp(1.25rem, 2.3vw, 2rem);
+      max-width: 30ch;
+      font-size: clamp(1.4rem, 3vw, 2.6rem);
       font-weight: 500;
       letter-spacing: -0.025em;
       line-height: 1.22;
     }
-    .bio p + p { margin-top: 0.9em; color: var(--muted); }
+    /* Names and projects stay white, the words between them go grey */
+    .bio p span { color: var(--muted); }
+    .bio a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: #3a3a3a;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.15em;
+      transition: text-decoration-color 0.2s;
+    }
+    .bio a:hover, .bio a:focus-visible { text-decoration-color: var(--ink); outline: none; }
 
     /* Label column on the left, content on the right */
     section.rows { margin-top: clamp(3.5rem, 10vh, 6rem); max-width: 980px; }
@@ -222,7 +232,7 @@
       .row { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
-      footer a { transition: none; }
+      footer a, .bio a { transition: none; }
     }
   </style>
 </head>
@@ -235,8 +245,7 @@
   <main>
     <section class="bio" aria-labelledby="bio-heading">
       <h2 class="display" id="bio-heading">Bio</h2>
-      <p>Connor Savage is a Canadian software and hardware developer who started programming at age 10, creating plugins for Grand Theft Auto V's LSPDFR modification. His early projects included FBI Callouts, EMS Callouts, K9 Callouts, and City Callouts.</p>
-      <p>Since then, his work has expanded into hardware, desktop applications, web platforms, and game development. Projects include DeskOS, Receet, Canada RP, and Dispatch Simulator, ranging from physical touchscreen controllers to digital receipt systems and simulation games.</p>
+      <p>Connor Savage is a Canadian software and hardware developer. <span>He started programming at 10, making LSPDFR plugins like</span> FBI Callouts <span>and</span> K9 Callouts<span>. Today he builds</span> <a href="https://deskos.ca/" target="_blank" rel="noopener">DeskOS</a><span>,</span> <a href="https://receet.ca/" target="_blank" rel="noopener">Receet</a><span>,</span> <a href="https://canadarp.ca/" target="_blank" rel="noopener">Canada RP</a><span>, and</span> <a href="https://dispatchsim.ca/" target="_blank" rel="noopener">Dispatch Simulator</a><span>.</span></p>
     </section>
 
     <section class="rows" aria-labelledby="projects-heading">
